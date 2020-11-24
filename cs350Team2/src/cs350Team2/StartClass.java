@@ -1,5 +1,5 @@
 
-package cs350Group2;
+package cs350Team2;
 import cs350f20project.Startup;
 import cs350f20project.controller.ActionProcessor;
 import cs350f20project.controller.Controller;
