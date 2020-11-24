@@ -2,6 +2,7 @@ package cs350f20project.controller.cli.parser;
 
 import cs350f20project.controller.command.A_Command;
 import cs350f20project.controller.command.meta.CommandMetaDoExit;
+import cs350f20project.datatype.Angle;
 public class CommandParser {
 
 	private MyParserHelper parserHelper;
@@ -14,6 +15,12 @@ public class CommandParser {
         this.commandText = commandText;
 
         System.out.println("HI USING OUR PARSER");
+    }
+    
+    private Angle parseAngle(String command) {
+        double value = Double.parseDouble(command);
+        Angle angle = new Angle(value);
+        return angle;
     }
 
     public void parse(){
