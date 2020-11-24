@@ -8,7 +8,13 @@ public class CommandParser {
 	private MyParserHelper parserHelper;
 	private String commandText;
 
-
+	private Angle parseAngle(String command) {
+        double value = Double.parseDouble(command);
+        Angle angle = new Angle(value);
+        return angle;
+    }
+	
+	private 
 
     public CommandParser(MyParserHelper parserHelper, String commandText){
         this.parserHelper = parserHelper;
@@ -17,12 +23,6 @@ public class CommandParser {
         System.out.println("HI USING OUR PARSER");
     }
     
-    private Angle parseAngle(String command) {
-        double value = Double.parseDouble(command);
-        Angle angle = new Angle(value);
-        return angle;
-    }
-
     public void parse(){
 
         if (this.commandText.equalsIgnoreCase("@exit"))
